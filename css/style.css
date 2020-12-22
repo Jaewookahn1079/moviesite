@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+*{}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+.clear{clear: both;}
+
+/*#header*/
+#header{width: 100%; height: 70px; background: #ededed;}
+#header .frame{width: 1200px; height: 100%; margin: 0 auto;}
+
+#header .frame .logo{float: left; padding: 15px 0;}
+#header .frame .logo a{display: block;}
+#header .frame .logo a img{display: block; height: 40px;}
+
+#header .frame .menu{float: right;}
+#header .frame .menu ul{}
+#header .frame .menu ul li{float: left; margin: 0 15px;}
+#header .frame .menu ul li a{display: block; line-height: 70px; text-transform: uppercase; font-size: 15px; color:#777; transition:color 0.5s;}
+
+#header .frame .menu ul li:hover a{color:#0055cc;}
+
+#main{width: 100%; height: 400px; background-size: cover; background-position: 50% 50%; animation:fadeImg 20s infinite; transition: background-image 0.5s;}
+/*animation:애니메이션이름 시간 반복여부설정 속도변화 + @keyframes 애니메이션이름*/
+@keyframes fadeImg{
+    0%{background-image: url(../img/visual.png);}
+    25%{background-image: url(../img/visual_02.png);}
+    50%{background-image: url(../img/visual_03.png);}
+    75%{background-image: url(../img/visual_04.png);}
+    100%{background-image: url(../img/visual.png);}
+}
+#main .frame{width: 1200px; height: 100%; margin: 0 auto; position: relative;}
+
+#main .frame .main_cont{position: absolute; top:50%; transform:translateY(-50%); left:calc(100% / 6); width: 33.33%;}
+#main .frame .main_cont h2{font-size: 30px; word-break:keep-all; color:#fff; padding-bottom: 20px;}
+#main .frame .main_cont a{display: block; width: 145px; height: 40px; border:1px solid #fff; border-radius:20px; color:#fff; font-size: 16px; text-align: center; line-height:40px; transition:background-color 0.5s;}
+
+#main .frame .main_cont a:hover{background-color: rgba(255, 255, 255, 0.15);}
+
+#section_01{width: 100%; height:auto;}
+#section_01 .frame{width: 1200px; height:auto; margin: 0 auto; padding: 60px 0;}
+#section_01 .frame h2{font-size: 24px; line-height: 30px; color:#555; padding-bottom: 40px; text-align: center; font-weight: normal;}
+#section_01 .frame .cont{font-size: 0;}
+#section_01 .frame .cont .box{width: calc(100% / 3 - 20px); margin: 0 10px; display: inline-block; vertical-align: top; font-size: 16px;}
+
+#section_01 .frame .cont .box .img{width: 100%; height: 200px; background-size: cover; background-position: 50% 50%; position: relative;}
+
+#section_01 .frame .cont .box:nth-child(1) .img{background-image: url(../img/cont_01.png);}
+#section_01 .frame .cont .box:nth-child(2) .img{background-image: url(../img/cont_02.jpeg);}
+#section_01 .frame .cont .box:nth-child(3) .img{background-image: url(../img/cont_03.jpg);}
+
+#section_01 .frame .cont .box .img img{position: absolute; top:50%; left:50%; width: 40px; transform:translate(-50%, -50%);}
+
+#section_01 .frame .cont .box p{color:#777; padding: 20px 0; text-align: center; line-height: 30px;}
+
+
+#section_02{width: 100%; height: 300px; background-image: url(../img/visual_04.png); background-size: cover; background-position: 50% 50%; text-align: center;}
+
+#section_02 .frame{width: 1200px; height: 100%; margin: 0 auto; padding: 60px 0;}
+#section_02 .frame h2{font-size: 24px; font-weight: normal; color:#fff; padding-bottom: 40px;}
+
+#section_02 .frame p{font-size: 16px; color:#fff; padding-bottom: 20px;}
+#section_02 .frame a{display: inline-block; width: 200px; color:#fff; height: 40px; line-height: 40px; border:1px solid #fff; border-radius:20px; transition: background-color 0.5s;}
+#section_02 .frame a:hover{background-color: rgba(255,255,255,0.15);}
+/*
+    <가로값이 존재하는 공간을 중앙에 배치할 때,>
+    #1. display:block; 인 요소를 갖고 있는 경우, 본인(가로값 100%보다 작은 경우/px, %)을 중앙에 배치하고자 margin:0 auto를 부여하면 됨
+    #2. display:inline-block; 인 요소를 갖고 있는 경우, 부모 또는 조상의 요소가 display:block; 인 요소를 갖고 있으면서, text-align:center;를 부여하면 자식은 가운데로 배치가 됨
+*/
+
+#section_03{width: 100%; height: auto; }
+#section_03 .frame{width: 1200px; height: auto; margin: 0 auto; padding: 60px 0;}
+#section_03 .frame h2{font-size: 24px; line-height: 30px; color:#555; padding-bottom: 40px; text-align: center; font-weight: normal;}
+
+#section_03 .frame .cont{font-size: 0;}
+#section_03 .frame .cont .box{width: calc(100% / 3 - 20px); height: 380px; display: inline-block; background-color: #ffffcc; margin: 0 10px 20px; background-size: cover; background-position: 50% 50%; position: relative; overflow: hidden;}
+
+#section_03 .frame .cont .box:nth-child(1){background-image: url(../img/yeobeen.png);}
+#section_03 .frame .cont .box:nth-child(2){background-image: url(../img/saebyeok.png);}
+#section_03 .frame .cont .box:nth-child(3){background-image: url(../img/sanghee.png);}
+#section_03 .frame .cont .box:nth-child(4){background-image: url(../img/yeeun.png);}
+#section_03 .frame .cont .box:nth-child(5){background-image: url(../img/hakju.png);}
+#section_03 .frame .cont .box:nth-child(6){background-image: url(../img/jungmin.png);}
+
+#section_03 .frame .cont .box .bottom_cont{position: absolute;  font-size: 14px; bottom:0; left:0; background-color: rgba(0,0,0,0.5); width: calc(100% - 40px); height: 60px; padding: 0 20px; transform:translateY(100%); transition:transform 0.5s;}
+
+#section_03 .frame .cont .box:hover .bottom_cont{transform:translateY(0);}
+
+#section_03 .frame .cont .box .bottom_cont p{float: left; font-size: 18px; color:#fff; line-height: 60px;}
+#section_03 .frame .cont .box .bottom_cont a{float:right; width: 158px; height: 28px; display: block; border:1px solid #fff; color:#fff; text-align: center; line-height: 28px; margin-top: 15px; border-radius:15px; transition:background-color 0.5s;}
+
+#section_03 .frame .cont .box .bottom_cont a:hover{background-color: rgba(255, 255, 255, 0.15);}
+
+#section_03 .frame .more{padding-top: 20px; text-align: center;}
+#section_03 .frame .more button{width: 180px; height: 40px; border:none; background-color: #555; color:#fff; font-size: 16px; border-radius:20px; cursor: pointer; transition: background-color 0.5s;}
+#section_03 .frame .more button:hover{background-color: #333;}
+
+#section_04{width: 100%; height: 380px; background-image: url(../img/content_03.png); background-size: cover; background-position: 50% 50%; padding: 60px 0; overflow: hidden;}
+
+#section_04 h2{font-size: 24px; font-weight: normal; color:#fff; padding-bottom: 80px; text-align: center;}
+
+#section_04 .flow_cover{width: 300%; animation:slide 30s infinite linear; transition: margin-left 1s;}
+@keyframes slide{
+    0%{margin-left:0;}
+    12.5%{margin-left:0;}
+    25%{margin-left:-100%;}
+    37.5%{margin-left:-100%;}
+    50%{margin-left:-200%;}
+    62.5%{margin-left:-200%;}
+    75%{margin-left:-100%;}
+    87.5%{margin-left:-100%;}
+    100%{margin-left:0;}
+}
+
+
+#section_04 .flow_cover .review_box{width: calc(100% / 3); float:left; /*background-color: #777;*/ text-align: center;}
+
+#section_04 .flow_cover .review_box p{width: 780px;height: 90px; color:#fff; margin: 0 auto; word-break:keep-all; font-size: 15px; line-height: 1.6; padding-bottom: 40px;}
+
+#section_04 .flow_cover .review_box .rv_img{width: 100px; height: 100px; background-color: #aaffff; margin: 0 auto; border-radius:50%; background-size: cover; background-position: 50% 50%;}
+
+#section_04 .flow_cover .review_box:nth-child(1) .rv_img{background-image: url(../img/review1.jpg);}
+#section_04 .flow_cover .review_box:nth-child(2) .rv_img{background-image: url(../img/review2.jpg);}
+#section_04 .flow_cover .review_box:nth-child(3) .rv_img{background-image: url(../img/review3.jpg);}
+
+#section_04 .flow_cover .review_box span{display: inline-block; padding: 20px 0; color:#fff; font-weight: bold;}
+
+
+#footer{width: 100%; height: auto; background-color: #555;}
+#footer .frame{width: 1200px; height: auto; margin: 0 auto; padding: 40px 0;}
+#footer .frame .top{border-bottom:1px solid #aaa; padding-bottom: 20px;}
+#footer .frame .top ul{}
+#footer .frame .top ul li{display: inline-block; margin-right: 40px;}
+#footer .frame .top ul li a{display: block; line-height: 30px; color:#ccc;}
+#footer .frame .top ul li:hover a{color:#fff;}
+
+#footer .frame .f_main{padding-top: 20px; font-size: 0;}
+
+#footer .frame .f_main .info{display: inline-block; width: 50%; font-size: 14px; color:#ccc;}
